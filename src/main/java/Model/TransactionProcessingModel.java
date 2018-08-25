@@ -42,12 +42,18 @@ public class TransactionProcessingModel {
             throw new IllegalArgumentException();
         }
 
-        while (this.transactionValidationStatus.isValidated()) {
+        while (!this.transactionValidationStatus.isValidated()) {
             System.out.println("Model is evaluating weight transaction");
             this.transactionValidationStatus.validatedWeight = TransactionValidator.ValidateTransactionWeight(this.transaction);
+            if (!this.transactionValidationStatus.validatedWeight)
+            {
+                continue;
+            }
 
             this.transactionValidationStatus.validatedItems = TransactionValidator.ValidateTransactionImage(this.transaction);
         }
+
+        this.transaction.setValidated(true);
 
         notifyViewers();
     }
