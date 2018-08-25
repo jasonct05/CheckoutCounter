@@ -8,6 +8,8 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import static Util.Utility.debug;
+
 public class CheckoutCounterController extends JPanel {
 
     public static final int LENGTH = 700;
@@ -61,7 +63,7 @@ public class CheckoutCounterController extends JPanel {
         this.tpm.addView((ICheckoutViewComponent) validateTransaction);
         this.tpm.addView((ICheckoutViewComponent) checkoutTransaction);
 
-        System.out.println("Ready for Util.Transaction");
+        debug("Ready for Transaction");
     }
 
     private boolean fAllowCheckoutTransaction() {
@@ -74,7 +76,7 @@ public class CheckoutCounterController extends JPanel {
     class ValidateListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             tpm.validateTransaction();
-            System.out.println("Validating");
+            debug("Validating");
         }
     }
 

@@ -8,6 +8,9 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static Util.Utility.debug;
+
 public class TransactionProcessingModel {
     private Transaction transaction;
     private TransactionValidationStatus transactionValidationStatus;
@@ -33,7 +36,7 @@ public class TransactionProcessingModel {
             throw new IllegalArgumentException("Active Unfinished Util.Transaction in Progress");
         this.transaction = this.transactionQuery.QueryTransactionId(transactionId);
         this.transactionValidationStatus = new TransactionValidationStatus();
-        System.out.println("received transaction ID: " + this.transaction.getTransactionId());
+        debug("received transaction ID: " + this.transaction.getTransactionId());
         notifyViewers();
     }
 
@@ -43,7 +46,7 @@ public class TransactionProcessingModel {
         }
 
         while (!this.transactionValidationStatus.isValidated()) {
-            System.out.println("Model is evaluating weight transaction");
+            debug("Model is evaluating weight transaction");
             this.transactionValidationStatus.validatedWeight = TransactionValidator.ValidateTransactionWeight(this.transaction);
             if (!this.transactionValidationStatus.validatedWeight)
             {

@@ -4,6 +4,8 @@ import Model.TransactionProcessingModel;
 
 import javax.swing.*;
 
+import static Util.Utility.debug;
+
 public class CheckoutTransactionView extends JButton implements ICheckoutViewComponent {
 
     TransactionProcessingModel tpm;
@@ -14,7 +16,7 @@ public class CheckoutTransactionView extends JButton implements ICheckoutViewCom
     }
 
     public void rerender() {
-        System.out.println("rerendering checkout button");
+        debug("rerendering checkout button");
         this.setEnabled(this.tpm.getTransaction() != null && this.tpm.getTransaction().getValidated());
     }
 }

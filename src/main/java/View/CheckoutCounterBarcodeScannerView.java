@@ -20,6 +20,8 @@ import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 
+import static Util.Utility.debug;
+
 public class CheckoutCounterBarcodeScannerView extends JPanel implements Runnable, ThreadFactory {
 
     private static final long serialVersionUID = 6441489157408381878L;
@@ -76,7 +78,7 @@ public class CheckoutCounterBarcodeScannerView extends JPanel implements Runnabl
             }
 
             if (result != null && this.tpm.getTransaction() == null) {
-                System.out.println("received barcode with string: " + result.getText());
+                debug("received barcode with string: " + result.getText());
                 this.tpm.queryTransaction(result.getText());
             }
 

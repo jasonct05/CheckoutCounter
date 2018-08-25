@@ -4,12 +4,14 @@ import Util.Transaction;
 
 import java.util.Scanner;
 
+import static Util.Utility.debug;
+
 public class TransactionValidator {
 
     public static boolean ValidateTransactionWeight(Transaction transaction) {
         boolean isWeightValidated = false;
 
-        System.out.println("Attempting to Validate Weight...");
+        debug("Attempting to Validate Weight...");
 
         // Simple fake some weight validation
         // TODO: Replace with Arduino / sth
@@ -21,7 +23,7 @@ public class TransactionValidator {
         // TODO: Make some buffer for difference
         isWeightValidated = expectedWeight == weight;
 
-        System.out.println("Weight validation status: " + isWeightValidated);
+        debug("Weight validation status: " + isWeightValidated);
         return isWeightValidated;
     }
 
@@ -29,8 +31,8 @@ public class TransactionValidator {
         boolean isImageValidated = true;
         // TODO: Do Some Machine Learning Validation
 
-        System.out.println("Attempting to Validate Weight...");
-        System.out.println("Weight validation status: " + isImageValidated);
+        debug("Attempting to Validate Weight...");
+        debug("Weight validation status: " + isImageValidated);
 
         return isImageValidated;
     }

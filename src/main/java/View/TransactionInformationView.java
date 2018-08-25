@@ -5,6 +5,8 @@ import Model.TransactionProcessingModel;
 import javax.swing.*;
 import java.awt.*;
 
+import static Util.Utility.debug;
+
 public class TransactionInformationView extends JPanel implements ICheckoutViewComponent {
 
     private TransactionProcessingModel tpm;
@@ -18,7 +20,7 @@ public class TransactionInformationView extends JPanel implements ICheckoutViewC
     }
 
     public void rerender() {
-        System.out.println("rerendering information panel");
+        debug("rerendering information panel");
         this.transactionTextArea.setText(null);
         if (this.tpm.getTransaction() != null) {
             this.transactionTextArea.setText(getTransactionString());
