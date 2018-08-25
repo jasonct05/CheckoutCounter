@@ -3,10 +3,10 @@ package Model;
 import Util.Item;
 import Util.Transaction;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
-
-import static Util.Utility.debug;
+import java.util.Set;
 
 public class TransactionValidator {
 
@@ -53,11 +53,31 @@ public class TransactionValidator {
     }
 
     private static boolean imageValidation(Transaction t, String localImage) {
-        List<Item> actualItems = null; // TODO: Replace with call to AZURE stuff
         List<Item> expectedItems = t.getItems();
+        Set<String> expectedItemNames = new HashSet<String>();
+        for(Item i : expectedItems) {
+            expectedItemNames.add(i.name);
+        }
 
-        // do some fancy compare
+        Set<String> actualItemsNames = new HashSet<String>(); // TODO: Replace with call to AZURE stuff
         t.setRequestImageURL(null);
-        return true;
+        return compareItems(expectedItemNames, actualItemsNames);
+    }
+
+    private static boolean compareItems(Set<String> expectedItems, Set<String> foundItems) {
+        System.out.print("Expected Items: ");
+        for(String s : expectedItems) {
+            System.out.print(s + ". ");
+        }
+        System.out.println();
+
+        System.out.print("Found Items: ");
+        for(String s : foundItems) {
+            System.out.print(s + ". ");
+        }
+        System.out.println();
+
+        return expectedItems.containsAll(foundItems) && foundItems.containsAll(expectedItems);
+
     }
 }

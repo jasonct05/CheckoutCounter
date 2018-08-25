@@ -87,7 +87,7 @@ public class CheckoutCounterBarcodeScannerView extends JPanel implements Runnabl
             if (image != null && this.tpm.getTransaction() != null && this.tpm.getTransaction().getRequestImageURL() != null) {
                 try {
                     // retrieve image
-                    System.out.println("saving image");
+                    debug("saving image");
                     File outputfile = new File("cache/" + this.tpm.getTransaction().getRequestImageURL() + ".png");
                     ImageIO.write(image, "png", outputfile);
                 } catch (Exception e) {
