@@ -1,3 +1,8 @@
+package Model;
+
+import Util.Item;
+import Util.Transaction;
+
 import java.util.List;
 import java.util.ArrayList;
 

@@ -1,6 +1,9 @@
+package Util;
+
+import Util.Item;
 import java.util.List;
 
-class Transaction {
+public class Transaction {
     private int transactionID; // primary key
     private List<Item> items;
     private boolean isValidated;

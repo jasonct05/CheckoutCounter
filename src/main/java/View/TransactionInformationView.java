@@ -1,12 +1,16 @@
+package View;
+
+import Model.TransactionProcessingModel;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class TransactionInformation extends JPanel implements ICheckoutViewComponent  {
+public class TransactionInformationView extends JPanel implements ICheckoutViewComponent {
 
     private TransactionProcessingModel tpm;
     private JTextArea transactionTextArea;
 
-    public TransactionInformation(TransactionProcessingModel tpm) {
+    public TransactionInformationView(TransactionProcessingModel tpm) {
         this.tpm = tpm;
         this.transactionTextArea = new JTextArea();
         this.setLayout(new BorderLayout());

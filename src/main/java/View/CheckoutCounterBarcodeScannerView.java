@@ -1,3 +1,5 @@
+package View;
+
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.Executor;
@@ -6,6 +8,8 @@ import java.util.concurrent.ThreadFactory;
 
 import javax.swing.*;
 
+import Model.TransactionProcessingModel;
+import Util.BufferedImageLuminanceSource;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamPanel;
 import com.github.sarxos.webcam.WebcamResolution;
@@ -15,9 +19,8 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import javafx.scene.paint.Color;
 
-public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, ThreadFactory {
+public class CheckoutCounterBarcodeScannerView extends JPanel implements Runnable, ThreadFactory {
 
     private static final long serialVersionUID = 6441489157408381878L;
 
@@ -27,7 +30,7 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
     private WebcamPanel panel = null;
     private TransactionProcessingModel tpm;
 
-    public CheckoutCounterBarcodeScanner(TransactionProcessingModel tpm, Dimension d) {
+    public CheckoutCounterBarcodeScannerView(TransactionProcessingModel tpm, Dimension d) {
         super();
 
         this.tpm = tpm;

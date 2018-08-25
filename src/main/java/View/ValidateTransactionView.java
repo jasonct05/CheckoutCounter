@@ -1,6 +1,10 @@
+package View;
+
+import Model.TransactionProcessingModel;
+
 import javax.swing.*;
 
-public class ValidateTransactionView extends JButton implements ICheckoutViewComponent  {
+public class ValidateTransactionView extends JButton implements ICheckoutViewComponent {
 
     TransactionProcessingModel tpm;
     public ValidateTransactionView(String info, TransactionProcessingModel tpm) {

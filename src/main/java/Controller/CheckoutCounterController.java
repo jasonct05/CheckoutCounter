@@ -1,3 +1,8 @@
+package Controller;
+
+import Model.TransactionProcessingModel;
+import View.*;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -26,14 +31,14 @@ public class CheckoutCounterController extends JPanel {
         titlePanel.add(title);
         titlePanel.setBackground(Color.lightGray);
 
-        JPanel barcodeScanner = new CheckoutCounterBarcodeScanner(this.tpm, new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
+        JPanel barcodeScanner = new CheckoutCounterBarcodeScannerView(this.tpm, new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
         barcodeScanner.setPreferredSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
-        JPanel transactionInformation = new TransactionInformation(this.tpm);
+        JPanel transactionInformation = new TransactionInformationView(this.tpm);
         barcodeScanner.setMinimumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
         JPanel footerPanel = new JPanel();
-        JButton validateTransaction = new ValidateTransactionView("Validate Transaction checkout", this.tpm);
+        JButton validateTransaction = new ValidateTransactionView("Validate Util.Transaction checkout", this.tpm);
         JButton checkoutTransaction = new CheckoutTransactionView("Proceed to checkout", this.tpm);
         footerPanel.add(validateTransaction);
         footerPanel.add(checkoutTransaction);
@@ -56,7 +61,7 @@ public class CheckoutCounterController extends JPanel {
         this.tpm.addView((ICheckoutViewComponent) validateTransaction);
         this.tpm.addView((ICheckoutViewComponent) checkoutTransaction);
 
-        System.out.println("Ready for Transaction");
+        System.out.println("Ready for Util.Transaction");
     }
 
     private boolean fAllowCheckoutTransaction() {

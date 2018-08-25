@@ -1,5 +1,10 @@
+package Model;
+
+import Model.DummyTransactionQuery;
+import Model.ITransactionQuery;
+import Util.Transaction;
+import View.ICheckoutViewComponent;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import javax.swing.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +29,7 @@ public class TransactionProcessingModel {
 
     public void queryTransaction(String transactionId) {
         if (this.transaction != null)
-            throw new IllegalArgumentException("Active Unfinished Transaction in Progress");
+            throw new IllegalArgumentException("Active Unfinished Util.Transaction in Progress");
         this.transaction = this.transactionQuery.QueryTransactionId(transactionId);
         System.out.println("received transaction ID: " + this.transaction.getTransactionId());
         notifyViewers();
