@@ -25,11 +25,12 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
 
     private Webcam webcam = null;
     private WebcamPanel panel = null;
-    private JTextArea textarea = null;
+    private TransactionProcessingModel tpm;
 
-    public CheckoutCounterBarcodeScanner() {
+    public CheckoutCounterBarcodeScanner(TransactionProcessingModel tpm) {
         super();
 
+        this.tpm = tpm;
         Dimension size = WebcamResolution.QVGA.getSize();
 
         webcam = Webcam.getWebcams().get(0);
@@ -73,7 +74,7 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
             }
 
             if (result != null) {
-                textarea.setText(result.getText());
+                this.tpm.queryTransaction(Integer.parseInt(result.getText()));
             }
 
         } while (true);

@@ -5,7 +5,6 @@ import javax.swing.*;
 
 public class CheckoutCounterController extends JPanel {
 
-    public static final boolean DUMMY_TRANSACTION_QUERY = true;
     public static final int LENGTH = 700;
     public static final int HEIGHT = 500;
     public static final int HEADER_HEIGHT = 25;
@@ -13,8 +12,8 @@ public class CheckoutCounterController extends JPanel {
 
     private TransactionProcessingModel tpm;
 
-    public CheckoutCounterController() {
-        this.tpm = new TransactionProcessingModel(DUMMY_TRANSACTION_QUERY);
+    public CheckoutCounterController(TransactionProcessingModel tpm) {
+        this.tpm = tpm;
 
         // to layout the various panels properly
         setLayout(new BorderLayout());
@@ -27,7 +26,10 @@ public class CheckoutCounterController extends JPanel {
         titlePanel.add(title);
         titlePanel.setBackground(Color.lightGray);
 
-        JPanel barcodeScanner = new CheckoutCounterBarcodeScanner();
+        JPanel barcodeScanner = new CheckoutCounterBarcodeScanner(this.tpm);
+        barcodeScanner.setMaximumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
+
+        JPanel transactionInformation = new TransactionInformation(this.tpm);
         barcodeScanner.setMaximumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
         JPanel footerPanel = new JPanel();
@@ -37,6 +39,7 @@ public class CheckoutCounterController extends JPanel {
         // add everything to main
         add(titlePanel, BorderLayout.NORTH);
         add(barcodeScanner, BorderLayout.WEST);
+        add(transactionInformation, BorderLayout.EAST);
         add(footerPanel, BorderLayout.SOUTH);
 
         // Add Action Listeners
