@@ -14,6 +14,7 @@ public class ValidateTransactionView extends JButton implements ICheckoutViewCom
 
     }
     public void rerender() {
+        System.out.println("rerendering validate transaction button");
         this.setEnabled(this.tpm.getTransaction() != null);
     }
 }

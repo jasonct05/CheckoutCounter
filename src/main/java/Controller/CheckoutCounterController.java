@@ -38,7 +38,7 @@ public class CheckoutCounterController extends JPanel {
         barcodeScanner.setMinimumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
         JPanel footerPanel = new JPanel();
-        JButton validateTransaction = new ValidateTransactionView("Validate Util.Transaction checkout", this.tpm);
+        JButton validateTransaction = new ValidateTransactionView("Validate checkout", this.tpm);
         JButton checkoutTransaction = new CheckoutTransactionView("Proceed to checkout", this.tpm);
         footerPanel.add(validateTransaction);
         footerPanel.add(checkoutTransaction);

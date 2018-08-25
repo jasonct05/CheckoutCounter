@@ -18,6 +18,7 @@ public class TransactionInformationView extends JPanel implements ICheckoutViewC
     }
 
     public void rerender() {
+        System.out.println("rerendering information panel");
         this.transactionTextArea.setText(null);
         if (this.tpm.getTransaction() != null) {
             this.transactionTextArea.setText(getTransactionString());
@@ -27,7 +28,7 @@ public class TransactionInformationView extends JPanel implements ICheckoutViewC
     private String getTransactionString(){
         String result = "\n\nWELCOME CUSTOMER:\n\n";
         result += this.tpm.getTransaction().toString() + "\n\n";
-        result += "\t\tTOTAL: $" + this.tpm.getTransaction().total();
+        result += "\t\tTOTAL: $" + this.tpm.getTransaction().totalPrice();
         return result;
     }
 

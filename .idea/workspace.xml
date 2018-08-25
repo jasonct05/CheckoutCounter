@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb9be6a7-d66a-4daa-ab7a-74db81e0cfbc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BufferedImageLuminanceSource.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CheckoutCounterBarcodeScanner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CheckoutCounterController$CheckoutListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/CheckoutCounterController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DummyTransactionQuery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ITransactionQuery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Item.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Transaction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/TransactionProcessingModel.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BufferedImageLuminanceSource.java" afterPath="$PROJECT_DIR$/src/main/java/Util/BufferedImageLuminanceSource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CheckoutCounterBarcodeScanner.java" afterPath="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CheckoutCounterController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CheckoutTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/DummyTransactionQuery.java" afterPath="$PROJECT_DIR$/src/main/java/Model/DummyTransactionQuery.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ICheckoutViewComponent.java" afterPath="$PROJECT_DIR$/src/main/java/View/ICheckoutViewComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ITransactionQuery.java" afterPath="$PROJECT_DIR$/src/main/java/Model/ITransactionQuery.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Item.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Item.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/TransactionInformation.java" afterPath="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/TransactionProcessingModel.java" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ValidateTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Model/DummyTransactionQuery.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Model/ITransactionQuery.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Network/ITransactionQuery.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/CheckoutCounterMain.class" afterPath="$PROJECT_DIR$/target/classes/CheckoutCounterMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CheckoutCounterMain.java" afterPath="$PROJECT_DIR$/src/main/java/CheckoutCounterMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" afterPath="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +28,8 @@
       <file leaf-file-name="CheckoutTransactionView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,11 +37,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CheckoutCounterMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CheckoutCounterMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TransactionInformationView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="437">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,23 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutCounterController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckoutCounterController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckoutCounterBarcodeScannerView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-602">
-              <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="114">
+              <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,24 +82,14 @@
         </entry>
       </file>
       <file leaf-file-name="DummyTransactionQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/DummyTransactionQuery.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#301#307#0" expanded="true" />
+                <element signature="e#309#315#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITransactionQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/ITransactionQuery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,12 +97,10 @@
       <file leaf-file-name="ValidateTransactionView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="240">
+              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,14 +109,14 @@
       <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#863#864#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,8 +125,24 @@
       <file leaf-file-name="TransactionProcessingModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="46" column="94" lean-forward="false" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#2630#2631#0" expanded="true" />
+                <element signature="e#2696#2697#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionValidator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,6 +173,7 @@
       <find>Pain</find>
       <find>ReceivedTr</find>
       <find>c</find>
+      <find>Validating</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,16 +205,19 @@
         <option value="$PROJECT_DIR$/src/main/java/TransactionInformationView.java" />
         <option value="$PROJECT_DIR$/src/main/java/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/ICheckoutViewComponent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/ITransactionQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/DummyTransactionQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/CheckoutCounterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Network/ITransactionQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
       </list>
     </option>
   </component>
@@ -279,6 +272,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CheckoutCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CheckoutCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="TransactionProcessingModel.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CheckoutCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
@@ -464,15 +482,16 @@
       <updated>1535160939454</updated>
       <workItem from="1535160942376" duration="1542000" />
       <workItem from="1535172961350" duration="38000" />
-      <workItem from="1535173059952" duration="13248000" />
+      <workItem from="1535173059952" duration="15348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14828000" />
+    <option name="totallyTimeSpent" value="16928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="766" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -487,7 +506,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -670,9 +689,27 @@
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Network/ITransactionQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,51 +723,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="238">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/ITransactionQuery.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/DummyTransactionQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#301#307#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-602">
-          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#309#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -745,42 +794,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="46" column="94" lean-forward="false" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#2630#2631#0" expanded="true" />
+            <element signature="e#2696#2697#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

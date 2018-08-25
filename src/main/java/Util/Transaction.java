@@ -14,10 +14,19 @@ public class Transaction {
         this.isValidated = false;
     }
 
-    public double total() {
+    public double totalPrice() {
         double total = 0;
         for(Item i: items) {
             total += i.price;
+        }
+
+        return total;
+    }
+
+    public double totalWeight() {
+        double total = 0;
+        for(Item i: items) {
+            total += i.weight;
         }
 
         return total;

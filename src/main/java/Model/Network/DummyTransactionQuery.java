@@ -1,4 +1,4 @@
-package Model;
+package Model.Network;
 
 import Util.Item;
 import Util.Transaction;
@@ -20,9 +20,5 @@ public class DummyTransactionQuery implements ITransactionQuery {
 
     public Transaction QueryTransactionId(String queryUrl) {
         return this.dummyTransaction;
-    }
-
-    public boolean validateTransaction(String queryUrl) {
-        return true;
     }
 }

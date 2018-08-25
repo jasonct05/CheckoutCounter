@@ -1,7 +1,7 @@
 package Model;
 
-import Model.DummyTransactionQuery;
-import Model.ITransactionQuery;
+import Model.Network.DummyTransactionQuery;
+import Model.Network.ITransactionQuery;
 import Util.Transaction;
 import View.ICheckoutViewComponent;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class TransactionProcessingModel {
     private Transaction transaction;
+    private TransactionValidationStatus transactionValidationStatus;
     private ITransactionQuery transactionQuery;
     private List<ICheckoutViewComponent> viewers; // viewers registered to this model
 
@@ -31,6 +32,7 @@ public class TransactionProcessingModel {
         if (this.transaction != null)
             throw new IllegalArgumentException("Active Unfinished Util.Transaction in Progress");
         this.transaction = this.transactionQuery.QueryTransactionId(transactionId);
+        this.transactionValidationStatus = new TransactionValidationStatus();
         System.out.println("received transaction ID: " + this.transaction.getTransactionId());
         notifyViewers();
     }
@@ -40,10 +42,12 @@ public class TransactionProcessingModel {
             throw new IllegalArgumentException();
         }
 
-        this.transaction.setValidated(true);
-        // TODO:
-        // weight check
-        // image recognition shit
+        while (this.transactionValidationStatus.isValidated()) {
+            System.out.println("Model is evaluating weight transaction");
+            this.transactionValidationStatus.validatedWeight = TransactionValidator.ValidateTransactionWeight(this.transaction);
+
+            this.transactionValidationStatus.validatedItems = TransactionValidator.ValidateTransactionImage(this.transaction);
+        }
 
         notifyViewers();
     }
@@ -61,5 +65,19 @@ public class TransactionProcessingModel {
         for(ICheckoutViewComponent v: viewers) {
             v.rerender();
         }
+    }
+}
+
+class TransactionValidationStatus {
+    public boolean validatedWeight;
+    public boolean validatedItems;
+
+    public TransactionValidationStatus() {
+        this.validatedItems = false;
+        this.validatedWeight = false;
+    }
+
+    public boolean isValidated() {
+        return this.validatedWeight && this.validatedItems;
     }
 }
