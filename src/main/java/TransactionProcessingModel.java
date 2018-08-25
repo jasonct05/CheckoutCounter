@@ -1,9 +1,12 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import javax.swing.*;
 
+import java.util.ArrayList;
 import java.util.List;
 public class TransactionProcessingModel {
     private Transaction transaction;
     private ITransactionQuery transactionQuery;
+    private List<ICheckoutViewComponent> viewers; // viewers registered to this model
 
     public TransactionProcessingModel(boolean isDummy) {
         if (isDummy) {
@@ -11,49 +14,47 @@ public class TransactionProcessingModel {
         } else {
             throw new NotImplementedException();
         }
-
-        this.transaction = null;
+        this.viewers = new ArrayList<ICheckoutViewComponent>();
+        resetTransaction();
     }
 
-    public void queryTransaction(int transactionId) {
-        if (transactionId < 0 || transaction != null)
+    public boolean addView(ICheckoutViewComponent view) {
+        return this.viewers.add(view);
+    }
+
+    public void queryTransaction(String transactionId) {
+        if (this.transaction != null)
             throw new IllegalArgumentException("Active Unfinished Transaction in Progress");
         this.transaction = this.transactionQuery.QueryTransactionId(transactionId);
+        System.out.println("received transaction ID: " + this.transaction.getTransactionId());
+        notifyViewers();
     }
 
-    public void validateTransaction(int transactionId){
-        if(this.transaction == null || transactionId != this.transaction.transactionID) {
+    public void validateTransaction(){
+        if(this.transaction == null) {
             throw new IllegalArgumentException();
         }
 
+        this.transaction.setValidated(true);
         // TODO:
         // weight check
         // image recognition shit
+
+        notifyViewers();
     }
-}
 
-class Transaction {
-    public int transactionID; // primary key
-    public List<Item> items;
-    public boolean isValidated;
-
-    public Transaction(int transactionID, List<Item> items) {
-        this.transactionID = transactionID;
-        this.items = items;
-        this.isValidated = false;
+    public Transaction getTransaction() {
+        return this.transaction;
     }
-}
 
-class Item {
-    public String ISBN10;
-    public String name;
-    public int price;
-    public double weight;
+    public void resetTransaction() {
+        this.transaction = null;
+        notifyViewers();
+    }
 
-    public Item(String ISBN10, String name, int price, double weight) {
-        this.ISBN10 = ISBN10;
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
+    private void notifyViewers() {
+        for(ICheckoutViewComponent v: viewers) {
+            v.rerender();
+        }
     }
 }

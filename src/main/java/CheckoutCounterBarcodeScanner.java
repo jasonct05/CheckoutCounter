@@ -1,5 +1,4 @@
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -16,6 +15,7 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
+import javafx.scene.paint.Color;
 
 public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, ThreadFactory {
 
@@ -27,7 +27,7 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
     private WebcamPanel panel = null;
     private TransactionProcessingModel tpm;
 
-    public CheckoutCounterBarcodeScanner(TransactionProcessingModel tpm) {
+    public CheckoutCounterBarcodeScanner(TransactionProcessingModel tpm, Dimension d) {
         super();
 
         this.tpm = tpm;
@@ -38,7 +38,6 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
 
         panel = new WebcamPanel(webcam);
         panel.setPreferredSize(size);
-        panel.setFPSDisplayed(false);
 
         add(panel);
 
@@ -73,8 +72,9 @@ public class CheckoutCounterBarcodeScanner extends JPanel implements Runnable, T
                 }
             }
 
-            if (result != null) {
-                this.tpm.queryTransaction(Integer.parseInt(result.getText()));
+            if (result != null && this.tpm.getTransaction() == null) {
+                System.out.println("received barcode with string: " + result.getText());
+                this.tpm.queryTransaction(result.getText());
             }
 
         } while (true);

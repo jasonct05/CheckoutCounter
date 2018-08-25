@@ -13,11 +13,11 @@ public class DummyTransactionQuery implements ITransactionQuery {
         this.dummyTransaction = new Transaction(1, transactionItems);
     }
 
-    public Transaction QueryTransactionId(int transactionId) {
+    public Transaction QueryTransactionId(String queryUrl) {
         return this.dummyTransaction;
     }
 
-    public boolean validateTransaction(int transactionId) {
+    public boolean validateTransaction(String queryUrl) {
         return true;
     }
 }

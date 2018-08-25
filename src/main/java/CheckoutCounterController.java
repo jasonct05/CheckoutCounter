@@ -6,7 +6,7 @@ import javax.swing.*;
 public class CheckoutCounterController extends JPanel {
 
     public static final int LENGTH = 700;
-    public static final int HEIGHT = 500;
+    public static final int HEIGHT = 400;
     public static final int HEADER_HEIGHT = 25;
     public static final int FOOTER_HEIGHT = 25;
 
@@ -26,34 +26,60 @@ public class CheckoutCounterController extends JPanel {
         titlePanel.add(title);
         titlePanel.setBackground(Color.lightGray);
 
-        JPanel barcodeScanner = new CheckoutCounterBarcodeScanner(this.tpm);
-        barcodeScanner.setMaximumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
+        JPanel barcodeScanner = new CheckoutCounterBarcodeScanner(this.tpm, new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
+        barcodeScanner.setPreferredSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
         JPanel transactionInformation = new TransactionInformation(this.tpm);
-        barcodeScanner.setMaximumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
+        barcodeScanner.setMinimumSize( new Dimension(LENGTH / 2, HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT));
 
         JPanel footerPanel = new JPanel();
-        JButton proceedToCheckout = new JButton("Proceed to checkout");
-        footerPanel.add(proceedToCheckout);
+        JButton validateTransaction = new ValidateTransactionView("Validate Transaction checkout", this.tpm);
+        JButton checkoutTransaction = new CheckoutTransactionView("Proceed to checkout", this.tpm);
+        footerPanel.add(validateTransaction);
+        footerPanel.add(checkoutTransaction);
 
         // add everything to main
         add(titlePanel, BorderLayout.NORTH);
         add(barcodeScanner, BorderLayout.WEST);
-        add(transactionInformation, BorderLayout.EAST);
+        add(transactionInformation, BorderLayout.CENTER);
         add(footerPanel, BorderLayout.SOUTH);
 
         // Add Action Listeners
-        CheckoutListener hourListener = new CheckoutListener();
-        proceedToCheckout.addActionListener(hourListener);
+        ValidateListener validateListener = new ValidateListener();
+        validateTransaction.addActionListener(validateListener);
+
+        CheckoutListener checkoutListener = new CheckoutListener();
+        checkoutTransaction.addActionListener(checkoutListener);
+
+        // add component to repaint
+        this.tpm.addView((ICheckoutViewComponent) transactionInformation);
+        this.tpm.addView((ICheckoutViewComponent) validateTransaction);
+        this.tpm.addView((ICheckoutViewComponent) checkoutTransaction);
+
+        System.out.println("Ready for Transaction");
+    }
+
+    private boolean fAllowCheckoutTransaction() {
+        return tpm.getTransaction() != null && tpm.getTransaction().getValidated();
     }
 
     /**
-     *  Handle ComboBox options for Hour
+     *  Handle Validate options for Checkout
+     */
+    class ValidateListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            tpm.validateTransaction();
+            System.out.println("Validating");
+        }
+    }
+
+    /**
+     *  Handle Checkout options for Checkout
      */
     class CheckoutListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            // TODO:
-            // What do we do when we checkout here!
+            tpm.resetTransaction();
+            JOptionPane.showMessageDialog(null, "Thank you come again!");
         }
     }
 }
