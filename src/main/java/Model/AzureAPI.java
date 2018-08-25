@@ -2,15 +2,18 @@ package Model;
 
 import java.io.File;
 import java.net.URI;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.FileEntity;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
@@ -18,28 +21,43 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
+import static Util.Utility.debug;
+
 public class AzureAPI {
-    public static void main(String[] args) {
-        analyzeImage("cache/ShoppingBasket.png");
-    }
+    public static final boolean USE_DUMMY_IMAGE = true;
+    public static final String IMAGE_TO_ANALYZE = "https://image.ibb.co/dbfYyU/IMG_5848.jpg";
 
-    public static ArrayList<String> analyzeImage(String path) {
+    // COKE WITH XBOX           ->  https://image.ibb.co/b4rHQ9/IMG_5848.jpg
+    // COKE WITH XBOX AND LYSOL ->  https://image.ibb.co/dbfYyU/IMG_5849.jpg
+
+    public static Set<String> analyzeImage(String path) {
         HttpClient httpclient = HttpClients.createDefault();
-
+        Set<String> result = new HashSet<String>();
         try
         {
             URIBuilder builder = new URIBuilder("https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/03f50af0-4ad1-47d9-bb7e-cbf492eb0367/url");
 
             URI uri = builder.build();
             HttpPost request = new HttpPost(uri);
-            request.setHeader("Prediction-Key", "b96bb8e106dd4dce9e6ccd1bd6292721");
-            request.setHeader("Content-Type", "application/octet-stream");
 
+            // using image
+            if (USE_DUMMY_IMAGE) {
+                request.setHeader("Prediction-Key", "b96bb8e106dd4dce9e6ccd1bd6292721");
+                request.setHeader("Content-Type", "application/json");
 
-            // Request body
-            File img = new File(path);
-            FileEntity reqEntity = new FileEntity(img, ContentType.APPLICATION_OCTET_STREAM);
-            request.setEntity(reqEntity);
+                // Request body
+                StringEntity reqEntity = new StringEntity("{\"url\":\"" + IMAGE_TO_ANALYZE + "\"}");
+                request.setEntity(reqEntity);
+            } else {
+                // using local file
+                request.setHeader("Prediction-Key", "b96bb8e106dd4dce9e6ccd1bd6292721");
+                request.setHeader("Content-Type", "application/octet-stream");
+
+                // Request body
+                File img = new File(path);
+                FileEntity reqEntity = new FileEntity(img, ContentType.APPLICATION_OCTET_STREAM);
+                request.setEntity(reqEntity);
+            }
 
             HttpResponse response = httpclient.execute(request);
             HttpEntity entity = response.getEntity();
@@ -49,7 +67,7 @@ public class AzureAPI {
             if (entity != null)
             {
 
-                System.out.println(jsonResult);
+                debug(jsonResult);
             }
 
 
@@ -60,25 +78,20 @@ public class AzureAPI {
             JSONArray predictions = (JSONArray) jo.get("predictions");
             Iterator products = predictions.iterator();
 
-            ArrayList<String> result = new ArrayList<String>();
-
             while (products.hasNext()) {
                 JSONObject product = (JSONObject) products.next();
-                double productProbability = product.getDouble("probability");
+                double productProbability = ((Number) product.get("probability")).doubleValue();
 
-                if (productProbability >= 0.85) {
+                if (productProbability >= 0.1) {
                     result.add((String) product.get("tagName"));
 
                 }
             }
-
-            return result;
         }
         catch (Exception e)
         {
-            System.out.println(e.getMessage());
-            return null;
+            // do nothing
         }
-
+        return result;
     }
 }

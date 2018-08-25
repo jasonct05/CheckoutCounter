@@ -11,9 +11,8 @@ public class DummyTransactionQuery implements ITransactionQuery {
 
     public DummyTransactionQuery() {
         List<Item> transactionItems = new ArrayList<Item>();
-        transactionItems.add(new Item("DUMMY-ISBN-1", "XBOX One", 250, 10.0));
-        transactionItems.add(new Item("DUMMY-ISBN-2", "Lysol Bleach", 10, 1.0));
-        transactionItems.add(new Item("DUMMY-ISBN-3", "Coke", 1, 0.5));
+        transactionItems.add(new Item("DUMMY-ISBN-1", "xbox", 250, 10.0));
+        transactionItems.add(new Item("DUMMY-ISBN-3", "coke", 1, 0.5));
 
         this.dummyTransaction = new Transaction(1, transactionItems);
     }

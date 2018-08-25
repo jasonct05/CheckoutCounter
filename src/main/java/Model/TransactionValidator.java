@@ -59,7 +59,7 @@ public class TransactionValidator {
             expectedItemNames.add(i.name);
         }
 
-        Set<String> actualItemsNames = new HashSet<String>(); // TODO: Replace with call to AZURE stuff
+        Set<String> actualItemsNames = AzureAPI.analyzeImage("cache/" + t.getRequestImageURL() + ".png");
         t.setRequestImageURL(null);
         return compareItems(expectedItemNames, actualItemsNames);
     }

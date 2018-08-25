@@ -13,7 +13,7 @@ import static Util.Utility.debug;
 public class CheckoutCounterController extends JPanel {
 
     public static final int LENGTH = 700;
-    public static final int HEIGHT = 400;
+    public static final int HEIGHT = 300;
     public static final int HEADER_HEIGHT = 25;
     public static final int FOOTER_HEIGHT = 25;
 
