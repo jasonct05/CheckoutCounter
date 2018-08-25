@@ -24,7 +24,7 @@ import org.json.simple.parser.*;
 import static Util.Utility.debug;
 
 public class AzureAPI {
-    public static final boolean USE_DUMMY_IMAGE = true;
+    public static final boolean USE_DUMMY_IMAGE = false;
     public static final String IMAGE_TO_ANALYZE = "https://image.ibb.co/dbfYyU/IMG_5848.jpg";
 
     // COKE WITH XBOX           ->  https://image.ibb.co/b4rHQ9/IMG_5848.jpg
@@ -35,7 +35,7 @@ public class AzureAPI {
         Set<String> result = new HashSet<String>();
         try
         {
-            URIBuilder builder = new URIBuilder("https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/03f50af0-4ad1-47d9-bb7e-cbf492eb0367/url");
+            URIBuilder builder = new URIBuilder("https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/03f50af0-4ad1-47d9-bb7e-cbf492eb0367/image");
 
             URI uri = builder.build();
             HttpPost request = new HttpPost(uri);
@@ -67,9 +67,8 @@ public class AzureAPI {
             if (entity != null)
             {
 
-                debug(jsonResult);
+                System.out.println(jsonResult);
             }
-
 
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(jsonResult);

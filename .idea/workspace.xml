@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb9be6a7-d66a-4daa-ab7a-74db81e0cfbc" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CheckoutCounter.iml" afterPath="$PROJECT_DIR$/CheckoutCounter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/AzureAPI.java" afterPath="$PROJECT_DIR$/src/main/java/Model/AzureAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java" afterPath="$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +30,11 @@
       <file leaf-file-name="AzureAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/AzureAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+            <state relative-caret-position="148">
+              <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1190#1198#0" expanded="true" />
+                <element signature="e#1191#1199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -550,12 +543,12 @@
       <workItem from="1535160942376" duration="1542000" />
       <workItem from="1535172961350" duration="38000" />
       <workItem from="1535173059952" duration="22969000" />
-      <workItem from="1535223986626" duration="3633000" />
+      <workItem from="1535223986626" duration="4089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28182000" />
+    <option name="totallyTimeSpent" value="28638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -665,7 +658,7 @@
           <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1190#1198#0" expanded="true" />
+            <element signature="e#1191#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,11 +993,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/AzureAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        <state relative-caret-position="148">
+          <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1190#1198#0" expanded="true" />
+            <element signature="e#1191#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
