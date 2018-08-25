@@ -2,10 +2,12 @@ package View;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import Model.TransactionProcessingModel;
@@ -73,13 +75,24 @@ public class CheckoutCounterBarcodeScannerView extends JPanel implements Runnabl
                 try {
                     result = new MultiFormatReader().decode(bitmap);
                 } catch (NotFoundException e) {
-                    // fall thru, it means there is no QR code in image
+                    // fall through, it means there is no QR code in image
                 }
             }
 
             if (result != null && this.tpm.getTransaction() == null) {
                 debug("received barcode with string: " + result.getText());
                 this.tpm.queryTransaction(result.getText());
+            }
+
+            if (image != null && this.tpm.getTransaction() != null && this.tpm.getTransaction().getRequestImageURL() != null) {
+                try {
+                    // retrieve image
+                    System.out.println("saving image");
+                    File outputfile = new File("cache/" + this.tpm.getTransaction().getRequestImageURL() + ".png");
+                    ImageIO.write(image, "png", outputfile);
+                } catch (Exception e) {
+                    // do nothing
+                }
             }
 
         } while (true);

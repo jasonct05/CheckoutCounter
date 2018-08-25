@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb9be6a7-d66a-4daa-ab7a-74db81e0cfbc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Util/Utility.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" afterPath="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" afterPath="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" afterPath="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" afterPath="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,18 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CheckoutTransactionView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CheckoutCounterController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,8 +42,8 @@
       <file leaf-file-name="CheckoutCounterBarcodeScannerView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="578">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,29 +51,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidateTransactionView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ValidateTransactionView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +66,8 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -108,14 +76,14 @@
       <file leaf-file-name="TransactionProcessingModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+            <state relative-caret-position="156">
+              <caret line="54" column="89" lean-forward="false" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#979#980#0" expanded="true" />
                 <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#2808#2809#0" expanded="true" />
-                <element signature="e#2874#2875#0" expanded="true" />
+                <element signature="e#2747#2748#0" expanded="true" />
+                <element signature="e#2813#2814#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,14 +99,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionValidator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TransactionValidator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="171">
+              <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,6 +128,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -170,8 +149,8 @@
       <find>print</find>
       <find>Syste</find>
       <find>System.out.print</find>
-      <find>System</find>
       <find>c</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,16 +187,16 @@
         <option value="$PROJECT_DIR$/src/main/java/View/CheckoutCounterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Network/ITransactionQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Network/DummyTransactionQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Debug.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/TransactionInformationView.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/CheckoutCounterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Utility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java" />
       </list>
     </option>
   </component>
@@ -258,6 +237,11 @@
             <path>
               <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
               <item name="CheckoutCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CheckoutCounter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -279,7 +263,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CheckoutCounter" type="b2602c69:ProjectViewProjectNode" />
@@ -465,12 +449,12 @@
       <updated>1535160939454</updated>
       <workItem from="1535160942376" duration="1542000" />
       <workItem from="1535172961350" duration="38000" />
-      <workItem from="1535173059952" duration="16476000" />
+      <workItem from="1535173059952" duration="18549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18056000" />
+    <option name="totallyTimeSpent" value="20129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -707,66 +691,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutTransactionView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#2808#2809#0" expanded="true" />
-            <element signature="e#2874#2875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -789,6 +717,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/sarxos/webcam-capture/0.3.12/webcam-capture-0.3.12.jar!/com/github/sarxos/webcam/Webcam.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="368" column="38" lean-forward="false" selection-start-line="368" selection-start-column="38" selection-end-line="368" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/CheckoutCounterBarcodeScannerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/Utility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -799,8 +761,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/ValidateTransactionView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionProcessingModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="54" column="89" lean-forward="false" selection-start-line="54" selection-start-column="89" selection-end-line="54" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#2747#2748#0" expanded="true" />
+            <element signature="e#2813#2814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/TransactionValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

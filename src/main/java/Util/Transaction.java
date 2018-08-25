@@ -1,17 +1,17 @@
 package Util;
-
-import Util.Item;
 import java.util.List;
 
 public class Transaction {
     private int transactionID; // primary key
     private List<Item> items;
     private boolean isValidated;
+    private String requestImageURL;
 
     public Transaction(int transactionID, List<Item> items) {
         this.transactionID = transactionID;
         this.items = items;
         this.isValidated = false;
+        this.requestImageURL = null;
     }
 
     public double totalPrice() {
@@ -41,13 +41,21 @@ public class Transaction {
         return this.isValidated;
     }
 
-    public boolean setTransactionId(int v) {
-        this.transactionID = v;
+    public int getTransactionId() {
+        return this.transactionID;
+    }
+
+    public List<Item> getItems() {
+        return this.items;
+    }
+
+    public boolean setRequestImageURL(String s) {
+        this.requestImageURL = s;
         return true;
     }
 
-    public int getTransactionId() {
-        return this.transactionID;
+    public String getRequestImageURL() {
+        return this.requestImageURL;
     }
 
     @Override

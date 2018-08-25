@@ -46,7 +46,6 @@ public class TransactionProcessingModel {
         }
 
         while (!this.transactionValidationStatus.isValidated()) {
-            debug("Model is evaluating weight transaction");
             this.transactionValidationStatus.validatedWeight = TransactionValidator.ValidateTransactionWeight(this.transaction);
             if (!this.transactionValidationStatus.validatedWeight)
             {
